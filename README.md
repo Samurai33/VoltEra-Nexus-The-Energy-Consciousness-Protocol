@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./public/voltera_logo.png" alt="VoltEra Nexus Logo" width="120" height="120" />
+
 # ⚡ VoltEra Nexus
 ### The Energy Consciousness Protocol
 
