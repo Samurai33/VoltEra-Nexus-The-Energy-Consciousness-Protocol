@@ -38,6 +38,62 @@ VoltEra Nexus is a **premium NFT collection landing page** showcasing 13 unique 
 
 ---
 
+## 🌟 Manifesto: The Energy Consciousness Protocol
+
+> *"Energia é consciência. Luz é dado. Rede é vida."*
+
+VoltEra Nexus representa mais do que uma coleção NFT — é um **manifesto tecnológico** que reimagina a relação entre energia, consciência e computação distribuída.
+
+### 🎯 Missão
+
+Construir uma **infraestrutura descentralizada** que transforme energia limpa em poder computacional e econômico distribuído. Nossa visão conecta sustentabilidade ambiental com soberania digital, criando um ecossistema onde cada nó representa independência do sistema centralizado.
+
+### 💫 Princípios Fundamentais
+
+1. **Autonomia Energética é Liberdade**  
+   Cada nó representa independência do sistema centralizado
+
+2. **Dados são um Direito Humano**  
+   Informação não deve ser propriedade privada de Big Techs
+
+3. **Descentralização Gera Equilíbrio**  
+   Distribuição de poder ao invés de concentração
+
+4. **Cada Nó é uma Célula Viva**  
+   Componentes da mente coletiva da Terra
+
+5. **Arte e Tecnologia são uma Só Consciência**  
+   Expressões complementares da criatividade humana
+
+### 🌍 Impacto e Visão
+
+A série une **estética espiritual-tecnológica** e **propósito ecológico**. Ao colecionar, você financia:
+
+- **Nós híbridos** (solar + eólico)
+- **Infraestrutura de computação verde** 
+- **Marketplace descentralizado** de energia, GPU e armazenamento
+
+### 📊 Metas Ambiciosas
+
+| Métrica | Objetivo | Status |
+|---------|----------|--------|
+| **Energia Renovável** | 100% | ✅ Compromisso firmado |
+| **Emissões Líquidas** | Zero até 2026 | 🔄 Em progresso |
+| **Potencial** | Infinito | ♾️ Descentralizado |
+
+### 🔮 As Três Fases da Consciência
+
+**🌅 Light (Gênese)**  
+A gênese da energia sustentável - onde tudo começa com a captura pura da luz solar e do vento.
+
+**🌐 Network (Expansão)**  
+A expansão da consciência distribuída - conexões se formam, redes se estabelecem, o ecossistema cresce.
+
+**🌑 Subnet (Sombra)**  
+A sombra e o submundo da rede - onde acontecem as transações mais profundas e a verdadeira descentralização.
+
+---
+
 ## 🛠️ Tech Stack
 
 ### Frontend
