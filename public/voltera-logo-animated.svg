@@ -1,0 +1,101 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer Circle with Gradient Border -->
+  <circle cx="200" cy="200" r="195" fill="none" stroke="url(#outerGradient)" stroke-width="8"/>
+  
+  <!-- Inner Energy Ring -->
+  <circle cx="200" cy="200" r="170" fill="none" stroke="url(#innerGradient)" stroke-width="4" opacity="0.6"/>
+  
+  <!-- Main Lightning Bolt - Sharp and Dynamic -->
+  <path d="M240 120L180 200H220L160 280L220 200H180L240 120Z" fill="url(#lightningGradient)" stroke="url(#lightningStroke)" stroke-width="2"/>
+  
+  <!-- Energy Swirl - Curved Flow -->
+  <path d="M120 160C140 140, 180 130, 220 140C260 150, 280 180, 270 220C260 260, 220 280, 180 270" 
+        stroke="url(#swirlGradient)" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.7"/>
+  
+  <!-- Secondary Energy Lines -->
+  <path d="M100 180C130 170, 160 175, 190 180" stroke="url(#flow1)" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8"/>
+  <path d="M210 220C240 225, 270 230, 300 220" stroke="url(#flow2)" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8"/>
+  <path d="M160 280C180 270, 200 275, 220 280" stroke="url(#flow3)" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.6"/>
+  
+  <!-- Central Energy Core -->
+  <circle cx="200" cy="200" r="25" fill="url(#coreGradient)" opacity="0.9"/>
+  <circle cx="200" cy="200" r="15" fill="url(#innerCore)" opacity="0.7"/>
+  
+  <!-- Particle Effects -->
+  <circle cx="150" cy="150" r="3" fill="#22D3EE" opacity="0.8">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="250" cy="250" r="4" fill="#10B981" opacity="0.6">
+    <animate attributeName="opacity" values="0.2;0.9;0.2" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="180" cy="120" r="2" fill="#FBBF24" opacity="0.7">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <defs>
+    <!-- Main Outer Gradient -->
+    <linearGradient id="outerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="30%" stop-color="#10B981"/>
+      <stop offset="70%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#0891B2"/>
+    </linearGradient>
+    
+    <!-- Inner Ring Gradient -->
+    <linearGradient id="innerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#22D3EE" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.8"/>
+    </linearGradient>
+    
+    <!-- Lightning Bolt Gradient -->
+    <linearGradient id="lightningGradient" x1="160" y1="120" x2="240" y2="280">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="30%" stop-color="#FBBF24"/>
+      <stop offset="70%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+    
+    <!-- Lightning Stroke -->
+    <linearGradient id="lightningStroke" x1="160" y1="120" x2="240" y2="280">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    
+    <!-- Energy Swirl -->
+    <linearGradient id="swirlGradient" x1="120" y1="160" x2="270" y2="270">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    
+    <!-- Flow Lines -->
+    <linearGradient id="flow1" x1="100" y1="180" x2="190" y2="180">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    
+    <linearGradient id="flow2" x1="210" y1="220" x2="300" y2="220">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0.6"/>
+    </linearGradient>
+    
+    <linearGradient id="flow3" x1="160" y1="280" x2="220" y2="280">
+      <stop offset="0%" stop-color="#059669" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.6"/>
+    </linearGradient>
+    
+    <!-- Core Gradients -->
+    <radialGradient id="coreGradient">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0.8"/>
+    </radialGradient>
+    
+    <radialGradient id="innerCore">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#FBBF24" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.3"/>
+    </radialGradient>
+  </defs>
+</svg>

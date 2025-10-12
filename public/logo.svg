@@ -1,0 +1,55 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="90" cy="90" r="85" fill="url(#paint0_linear)" stroke="url(#paint1_linear)" stroke-width="2"/>
+  
+  <!-- Lightning Bolt -->
+  <path d="M110 65L85 95H100L70 115L95 85H80L110 65Z" fill="url(#paint2_linear)"/>
+  
+  <!-- Energy Flow Lines -->
+  <path d="M45 75C55 70, 65 72, 75 75" stroke="url(#paint3_linear)" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M105 105C115 108, 125 110, 135 105" stroke="url(#paint4_linear)" stroke-width="3" stroke-linecap="round" fill="none"/>
+  
+  <!-- Inner Glow -->
+  <circle cx="90" cy="90" r="25" fill="url(#paint5_radial)" opacity="0.3"/>
+  
+  <defs>
+    <!-- Main Background Gradient -->
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE" stop-opacity="0.1"/>
+      <stop offset="0.5" stop-color="#10B981" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#059669" stop-opacity="0.1"/>
+    </linearGradient>
+    
+    <!-- Border Gradient -->
+    <linearGradient id="paint1_linear" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="0.5" stop-color="#10B981"/>
+      <stop offset="1" stop-color="#059669"/>
+    </linearGradient>
+    
+    <!-- Lightning Gradient -->
+    <linearGradient id="paint2_linear" x1="70" y1="65" x2="110" y2="115" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBBF24"/>
+      <stop offset="0.5" stop-color="#10B981"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    
+    <!-- Energy Flow 1 -->
+    <linearGradient id="paint3_linear" x1="45" y1="75" x2="75" y2="75" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#10B981" stop-opacity="0.8"/>
+    </linearGradient>
+    
+    <!-- Energy Flow 2 -->
+    <linearGradient id="paint4_linear" x1="105" y1="105" x2="135" y2="105" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10B981" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0.6"/>
+    </linearGradient>
+    
+    <!-- Inner Glow -->
+    <radialGradient id="paint5_radial" cx="0" cy="0" r="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#FBBF24"/>
+      <stop offset="1" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

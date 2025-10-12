@@ -1,0 +1,255 @@
+import React, { useEffect, useMemo, useState } from "react";
+
+/**
+ * VoltEra — The Energy Consciousness Series (2025)
+ * Single‑file React landing page (TailwindCSS) for OpenSea mint + storytelling.
+ *
+ * How to use:
+ * - Drop into a Next.js/React app (Tailwind enabled). Save as app/page.tsx or src/App.tsx.
+ * - Replace OPENSEA_COLLECTION_URL and IMAGE_BASE with your real links.
+ * - Replace the placeholder image URLs or point to your IPFS gateway (https://ipfs.io/ipfs/<CID>/file.png).
+ * - Optional: wire up live fetch from OpenSea (see fetchCollectionItems()).
+ */
+
+const OPENSEA_COLLECTION_URL = "https://opensea.io/collection/volt-era-energy-consciousness-2025"; // TODO: replace with your real collection URL
+const DASHBOARD_URL = "https://voltera-dash.vercel.app";
+const IMAGE_BASE = "https://ipfs.io/ipfs/QmYourCID"; // TODO: replace with your real CID
+
+// 13 official items — names and image file names should match your uploaded assets
+const METADATA = [
+  { id: 1,  slug: "Dawn_Node",       title: "Dawn Node",       phase: "Light",   energy: "Solar",        file: "Dawn_Node.png" },
+  { id: 2,  slug: "Aeon_Turbine",    title: "Aeon Turbine",    phase: "Light",   energy: "Eólica",       file: "Aeon_Turbine.png" },
+  { id: 3,  slug: "Fusion_Core",     title: "Fusion Core",     phase: "Light",   energy: "Solar‑Eólica", file: "Fusion_Core.png" },
+  { id: 4,  slug: "Aurora_Core",     title: "Aurora Core",     phase: "Light",   energy: "Polar",        file: "Aurora_Core.png" },
+  { id: 5,  slug: "Quantum_Light",   title: "Quantum Light",   phase: "Light",   energy: "Quântica",     file: "Quantum_Light.png" },
+  { id: 6,  slug: "Horizon_Array",   title: "Horizon Array",   phase: "Network", energy: "Global",       file: "Horizon_Array.png" },
+  { id: 7,  slug: "Zenith_Halo",     title: "Zenith Halo",     phase: "Network", energy: "Lumínica",     file: "Zenith_Halo.png" },
+  { id: 8,  slug: "Gaia_Circuit",    title: "Gaia Circuit",    phase: "Network", energy: "Orgânica",     file: "Gaia_Circuit.png" },
+  { id: 9,  slug: "Neural_Sun",      title: "Neural Sun",      phase: "Network", energy: "Neural",       file: "Neural_Sun.png" },
+  { id: 10, slug: "Genesis_Node",    title: "Genesis Node",    phase: "Network", energy: "Primordial",   file: "Genesis_Node.png" },
+  { id: 11, slug: "Dark_Grid",       title: "Dark Grid",       phase: "Subnet",  energy: "Sombria",      file: "Dark_Grid.png" },
+  { id: 12, slug: "Ghost_Protocol",  title: "Ghost Protocol",  phase: "Subnet",  energy: "Etérea",       file: "Ghost_Protocol.png" },
+  { id: 13, slug: "Root_Access",     title: "Root Access",     phase: "Subnet",  energy: "Nuclear",      file: "Root_Access.png" },
+];
+
+function classNames(...c: (string | false | undefined)[]) {
+  return c.filter(Boolean).join(" ");
+}
+
+const phases: Record<string, { color: string; desc: string }>= {
+  Light:   { color: "from-amber-300 via-emerald-300 to-cyan-300", desc: "A gênese da energia sustentável" },
+  Network: { color: "from-cyan-300 via-sky-300 to-indigo-300",   desc: "A expansão da consciência distribuída" },
+  Subnet:  { color: "from-rose-300 via-fuchsia-300 to-emerald-300", desc: "A sombra e o submundo da rede" },
+};
+
+export default function VoltEraNFTLanding() {
+  const [mounted, setMounted] = useState(false);
+  const [search, setSearch] = useState("");
+  const [phaseFilter, setPhaseFilter] = useState<string | null>(null);
+
+  useEffect(() => setMounted(true), []);
+
+  const filtered = useMemo(() => {
+    const s = search.trim().toLowerCase();
+    return METADATA.filter((m) =>
+      (!phaseFilter || m.phase === phaseFilter) &&
+      (!s || m.title.toLowerCase().includes(s) || m.energy.toLowerCase().includes(s))
+    );
+  }, [search, phaseFilter]);
+
+  return (
+    <main className="min-h-screen bg-[#0A0A0A] text-white antialiased">
+      {/* Header */}
+      <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/40 bg-black/30 border-b border-white/10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="h-8 w-8 rounded-md bg-gradient-to-br from-emerald-400 to-cyan-400" aria-hidden />
+            <span className="text-sm sm:text-base font-semibold tracking-wide">VoltEra — Energy Consciousness Series (2025)</span>
+          </div>
+          <nav className="hidden md:flex items-center gap-6 text-sm">
+            <a href="#collection" className="hover:text-emerald-300">Coleção</a>
+            <a href="#manifesto" className="hover:text-emerald-300">Manifesto</a>
+            <a href="#roadmap" className="hover:text-emerald-300">Roadmap</a>
+            <a href={OPENSEA_COLLECTION_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-emerald-400/10 ring-1 ring-emerald-300/30 hover:bg-emerald-400/20 transition">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="opacity-90"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
+              OpenSea
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section className="relative overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(34,197,94,0.15),transparent_40%),radial-gradient(ellipse_at_bottom_left,rgba(34,211,238,0.15),transparent_40%)]" />
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
+              A energia é a nova moeda.
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-cyan-300">A consciência é a nova rede.</span>
+            </h1>
+            <p className="mt-6 text-base md:text-lg text-white/70 max-w-2xl">
+              13 NFTs que narram a gênese, a expansão e a sombra da rede energética descentralizada VoltEra —
+              uma estética espiritual‑tecnológica para colecionadores de futuros.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href={OPENSEA_COLLECTION_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-gradient-to-r from-emerald-400 to-cyan-400 text-black font-semibold hover:opacity-90">
+                Mint na OpenSea
+              </a>
+              <a href={DASHBOARD_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-xl px-5 py-3 ring-1 ring-white/15 hover:bg-white/5">
+                VoltEra Dashboard
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Controls */}
+      <section aria-label="Controles" className="border-t border-white/10 bg-black/30">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+          <div className="flex items-center gap-2 overflow-auto">
+            {["Light","Network","Subnet"].map((p) => (
+              <button
+                key={p}
+                onClick={() => setPhaseFilter(v => v===p ? null : p)}
+                className={classNames(
+                  "px-3 py-1.5 rounded-lg text-sm transition",
+                  phaseFilter===p ? "bg-emerald-400/20 ring-1 ring-emerald-300/40" : "bg-white/5 hover:bg-white/10"
+                )}
+                aria-pressed={phaseFilter===p}
+              >{p}</button>
+            ))}
+          </div>
+          <div className="flex-1 md:flex-initial" />
+          <label className="relative inline-flex items-center w-full md:w-80">
+            <input
+              className="w-full rounded-xl bg-black/40 ring-1 ring-white/15 px-4 py-2.5 pr-10 placeholder-white/40 focus:outline-none focus:ring-emerald-300/50"
+              placeholder="Buscar por nome ou energia..."
+              value={search}
+              onChange={(e)=>setSearch(e.target.value)}
+              aria-label="Buscar NFTs"
+            />
+            <svg className="absolute right-3 h-4 w-4 text-white/50" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="1.5"/><path d="M20 20L17 17" stroke="currentColor" strokeWidth="1.5"/></svg>
+          </label>
+        </div>
+      </section>
+
+      {/* Collection Grid */}
+      <section id="collection" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+        <div className="mb-8">
+          <h2 className="text-2xl md:text-3xl font-semibold">Coleção Oficial (13)</h2>
+          <p className="text-white/60 mt-2">Cada peça é um fragmento da narrativa energética: <em>Light</em> → <em>Network</em> → <em>Subnet</em>.</p>
+        </div>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filtered.map((item) => (
+            <li key={item.id} className="group rounded-2xl overflow-hidden bg-white/5 ring-1 ring-white/10 hover:ring-emerald-300/40 transition">
+              <div className="relative aspect-square overflow-hidden">
+                <img
+                  src={`${IMAGE_BASE}/${item.file}`}
+                  alt={`${item.title} — VoltEra NFT #${item.id}`}
+                  className="h-full w-full object-cover object-center group-hover:scale-[1.02] transition-transform"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute left-3 top-3 text-[11px] font-medium px-2 py-1 rounded-md bg-black/60 ring-1 ring-white/10">#{String(item.id).padStart(3,"0")}</div>
+              </div>
+              <div className="p-4 flex items-start justify-between gap-3">
+                <div>
+                  <h3 className="font-semibold tracking-tight">{item.title}</h3>
+                  <p className="text-xs text-white/60 mt-0.5">{item.phase} • {item.energy}</p>
+                </div>
+                <span className={classNames(
+                  "text-[10px] uppercase tracking-wider px-2 py-1 rounded-md bg-gradient-to-r text-black font-semibold",
+                  phases[item.phase]?.color ? phases[item.phase].color : "from-zinc-200 to-zinc-300"
+                )}>
+                  {item.phase}
+                </span>
+              </div>
+              <div className="px-4 pb-4">
+                <a
+                  href={OPENSEA_COLLECTION_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-emerald-300 hover:text-emerald-200"
+                  aria-label={`Ver ${item.title} na OpenSea`}
+                >
+                  Ver na OpenSea
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
+                </a>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* Manifesto */}
+      <section id="manifesto" className="border-t border-white/10 bg-white/[0.03]">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16">
+          <h2 className="text-2xl md:text-3xl font-semibold">Manifesto</h2>
+          <blockquote className="mt-6 text-white/80 leading-relaxed">
+            “A energia é a nova moeda. A consciência é a nova rede. A VoltEra é o elo vivo entre natureza, máquina e espírito.”
+          </blockquote>
+          <p className="mt-6 text-white/70">
+            A série une estética espiritual‑tecnológica e propósito ecológico. Ao colecionar, você financia nós híbridos (solar+eólico),
+            infraestrutura de computação verde e um marketplace descentralizado de energia, GPU e armazenamento.
+          </p>
+        </div>
+      </section>
+
+      {/* Roadmap */}
+      <section id="roadmap" className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+        <h2 className="text-2xl md:text-3xl font-semibold">Roadmap Cultural & Técnico</h2>
+        <ol className="mt-6 grid gap-4 md:grid-cols-2">
+          <li className="rounded-xl p-4 bg-white/5 ring-1 ring-white/10">
+            <h3 className="font-semibold">Lançamento (Q4/2025)</h3>
+            <p className="text-sm text-white/70">Coleção oficial (13). Mint na OpenSea (Polygon). Galeria no VoltEra Dashboard.</p>
+          </li>
+          <li className="rounded-xl p-4 bg-white/5 ring-1 ring-white/10">
+            <h3 className="font-semibold">Integração DAO (Q1/2026)</h3>
+            <p className="text-sm text-white/70">Badges on‑chain e governança simbólica para holders.</p>
+          </li>
+          <li className="rounded-xl p-4 bg-white/5 ring-1 ring-white/10">
+            <h3 className="font-semibold">Arte Dinâmica (Q2/2026)</h3>
+            <p className="text-sm text-white/70">Atualização opcional de metadata em função de métricas energéticas reais.</p>
+          </li>
+          <li className="rounded-xl p-4 bg-white/5 ring-1 ring-white/10">
+            <h3 className="font-semibold">Residência Artística (Q3/2026)</h3>
+            <p className="text-sm text-white/70">Convidados para séries colaborativas sobre energia e consciência.</p>
+          </li>
+        </ol>
+      </section>
+
+      {/* FAQ */}
+      <section className="border-t border-white/10 bg-white/[0.03]">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16">
+          <h2 className="text-2xl md:text-3xl font-semibold">FAQ</h2>
+          <div className="mt-6 grid gap-4">
+            <div className="rounded-xl p-4 bg-white/5 ring-1 ring-white/10">
+              <h3 className="font-semibold">Como faço mint?</h3>
+              <p className="text-sm text-white/70">Clique em “Mint na OpenSea”. Conecte sua carteira Polygon e confirme. Taxas em MATIC.</p>
+            </div>
+            <div className="rounded-xl p-4 bg-white/5 ring-1 ring-white/10">
+              <h3 className="font-semibold">Onde vejo meu NFT?</h3>
+              <p className="text-sm text-white/70">No seu perfil da OpenSea e também no VoltEra Dashboard, com badge de fundador.</p>
+            </div>
+            <div className="rounded-xl p-4 bg-white/5 ring-1 ring-white/10">
+              <h3 className="font-semibold">Posso usar IPFS?</h3>
+              <p className="text-sm text-white/70">Sim. Recomendamos gateways confiáveis e fixação via Pinata/Filebase. Atualize IMAGE_BASE.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
+          <p>© 2025 VoltEra Technologies. Todos os direitos reservados.</p>
+          <div className="flex items-center gap-5">
+            <a href={DASHBOARD_URL} target="_blank" rel="noreferrer" className="hover:text-emerald-300">Dashboard</a>
+            <a href={OPENSEA_COLLECTION_URL} target="_blank" rel="noreferrer" className="hover:text-emerald-300">OpenSea</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  );
+}
