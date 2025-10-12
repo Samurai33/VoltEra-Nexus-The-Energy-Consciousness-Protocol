@@ -40,57 +40,57 @@ VoltEra Nexus is a **premium NFT collection landing page** showcasing 13 unique 
 
 ## 🌟 Manifesto: The Energy Consciousness Protocol
 
-> *"Energia é consciência. Luz é dado. Rede é vida."*
+> *"Energy is consciousness. Light is data. Network is life."*
 
-VoltEra Nexus representa mais do que uma coleção NFT — é um **manifesto tecnológico** que reimagina a relação entre energia, consciência e computação distribuída.
+VoltEra Nexus represents more than an NFT collection — it's a **technological manifesto** that reimagines the relationship between energy, consciousness, and distributed computing.
 
-### 🎯 Missão
+### 🎯 Mission
 
-Construir uma **infraestrutura descentralizada** que transforme energia limpa em poder computacional e econômico distribuído. Nossa visão conecta sustentabilidade ambiental com soberania digital, criando um ecossistema onde cada nó representa independência do sistema centralizado.
+Build a **decentralized infrastructure** that transforms clean energy into distributed computational and economic power. Our vision connects environmental sustainability with digital sovereignty, creating an ecosystem where each node represents independence from centralized systems.
 
-### 💫 Princípios Fundamentais
+### 💫 Fundamental Principles
 
-1. **Autonomia Energética é Liberdade**  
-   Cada nó representa independência do sistema centralizado
+1. **Energy Autonomy is Freedom**  
+   Each node represents independence from centralized systems
 
-2. **Dados são um Direito Humano**  
-   Informação não deve ser propriedade privada de Big Techs
+2. **Data is a Human Right**  
+   Information should not be private property of Big Tech
 
-3. **Descentralização Gera Equilíbrio**  
-   Distribuição de poder ao invés de concentração
+3. **Decentralization Creates Balance**  
+   Power distribution instead of concentration
 
-4. **Cada Nó é uma Célula Viva**  
-   Componentes da mente coletiva da Terra
+4. **Every Node is a Living Cell**  
+   Components of Earth's collective mind
 
-5. **Arte e Tecnologia são uma Só Consciência**  
-   Expressões complementares da criatividade humana
+5. **Art and Technology are One Consciousness**  
+   Complementary expressions of human creativity
 
-### 🌍 Impacto e Visão
+### 🌍 Impact and Vision
 
-A série une **estética espiritual-tecnológica** e **propósito ecológico**. Ao colecionar, você financia:
+The series unites **spiritual-technological aesthetics** and **ecological purpose**. By collecting, you finance:
 
-- **Nós híbridos** (solar + eólico)
-- **Infraestrutura de computação verde** 
-- **Marketplace descentralizado** de energia, GPU e armazenamento
+- **Hybrid nodes** (solar + wind)
+- **Green computing infrastructure** 
+- **Decentralized marketplace** for energy, GPU and storage
 
-### 📊 Metas Ambiciosas
+### 📊 Ambitious Goals
 
-| Métrica | Objetivo | Status |
+| Metric | Target | Status |
 |---------|----------|--------|
-| **Energia Renovável** | 100% | ✅ Compromisso firmado |
-| **Emissões Líquidas** | Zero até 2026 | 🔄 Em progresso |
-| **Potencial** | Infinito | ♾️ Descentralizado |
+| **Renewable Energy** | 100% | ✅ Commitment made |
+| **Net Emissions** | Zero by 2026 | 🔄 In progress |
+| **Potential** | Infinite | ♾️ Decentralized |
 
-### 🔮 As Três Fases da Consciência
+### 🔮 The Three Phases of Consciousness
 
-**🌅 Light (Gênese)**  
-A gênese da energia sustentável - onde tudo começa com a captura pura da luz solar e do vento.
+**🌅 Light (Genesis)**  
+The genesis of sustainable energy - where everything begins with pure capture of sunlight and wind.
 
-**🌐 Network (Expansão)**  
-A expansão da consciência distribuída - conexões se formam, redes se estabelecem, o ecossistema cresce.
+**🌐 Network (Expansion)**  
+The expansion of distributed consciousness - connections form, networks establish, the ecosystem grows.
 
-**🌑 Subnet (Sombra)**  
-A sombra e o submundo da rede - onde acontecem as transações mais profundas e a verdadeira descentralização.
+**🌑 Subnet (Shadow)**  
+The shadow and underworld of the network - where the deepest transactions happen and true decentralization occurs.
 
 ---
 
